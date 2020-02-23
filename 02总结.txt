@@ -1,0 +1,128 @@
+02 数据类型及存储和转换
+*数据类型
+ ES5原始数据类型（6种）：Object Number String Boolean Null Undefined
+ 划分（2类）：基本（原始）数据类型： Number String Boolean Null Undefined
+                       引用（对象）数据类型： Object（Array、Function、Date等）
+*typeof--判断数据类型
+ typeof 操作符
+ 返回一个字符串，表示未经计算的操作数的类型。
+ 类型                  结果
+Undefined         “undefined”
+Null                     “object”
+Boolean              “boolean”
+Number             “number”
+String                    “string”
+函数对象              “function”
+任何其他对象          “object”
+
+
+*数据、变量和类型
+ 数据、变量和类型
+ JavaScript 中的变量没有类型
+ JavaScript 中的数据值有类型
+ 变量可以随时持有任何类型的值
+ 在对变量执行 typeof 操作时，得到的结果并不是该变量的类型，而是该变量持有的值的类型。
+
+*变量与内存
+变量声明
+ 使用方便的标识符，用于引用计算机内存地址（var）
+ 变量声明指向一块内存空间，用于保存数据
+ 变量赋值
+ 向变量指向的内存空间中存放数据
+ 一般来说，系统会划分出两种不同的内存空间
+ 栈内存（stack）
+ 堆内存（heap）
+物理内存
+与数据结构中的堆栈（逻辑结构）不一样 
+
+*堆栈内存
+栈内存
+ 存储的值大小固定
+ 由系统自动分配内存空间
+ 空间小，运行效率高
+ 堆内存
+ 存储的值大小不定，可动态调整
+ 由程序员通过代码进行分配
+ 空间大，运行效率相对较低
+
+*基本类型的存储
+基本类型的变量是存放在栈区的
+例：
+var name = 'jozo';
+var city = 'guangzhou';
+var age = 22;
+栈区
+name   jozo
+city      guangzhou
+age      22
+基本类型的值是不可变的
+var name = 'jozo';
+name.toUpperCse();//转换为大写
+console.log(name);//结果为jozo
+
+*引用类型的存储
+引用类型的值是同时保存在栈内存和堆内存中的对象
+
+
+*基本类型与引用类型的区别
+ 访问机制不同
+  基本类型的值直接访问
+  引用类型的值通过引用访问，不能直接访问
+    首先，从栈中获取该对象的地址引用
+    其次，再从堆内存中取得我们需要的数据
+ 复制变量不同
+  基本类型复制 —— 相互独立互不影响
+   实际复制的是值，存在两个不同的、独立的副本
+  引用类型复制
+   复制的只是对数值的引用。如果通过这个新的引用修改了数值，这个改变对原始的引用来说也可见
+
+ 比较变量不同
+ 值类型是判断变量的值是否相等（值比较）
+ 引用类型是判断所指向的内存空间（地址）是否相同（引用比较）
+ 参数传递不同
+  ECMAScript 中所有函数的参数都是按值来传递的
+   基本类型值：把变量里的数据值传递给参数，之后参数和变量互不影响。
+   引用类型值：把对象的引用（地址）值传递给参数，参数和对象都指向同一个对象，相互影响。
+
+*类型转换
+类型转换 —— 将值从一种类型转换为另一种类型
+ 隐式类型转换：通常是某些操作的副作用，不易看出
+ 例：
+ var a = 2;
+ var b = "3";
+ var c = a + b;
+ console.log(c,typeof c);//string
+ 显示类型转换：可以在代码中明显看出
+ 例：
+ var a = 2;
+ var b = String(a);
+ console.log(a,typeof a);//number
+ console.log(b,typeof b);//string
+ 转换为 Boolean 类型规则
+ 值                  转换成的布尔值
+undefined         False
+null                   False
+布尔值               与输入值相同
+数字                  0，NaN转换成false，其他转换成true
+字符串               ''转换成false，其他转换成true
+ 强制转换为 Boolean 类型
+ Boolean()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 

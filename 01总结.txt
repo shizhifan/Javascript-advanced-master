@@ -1,0 +1,53 @@
+01 JavaScript发展历程及语言特点
+*JavaScript的组成
+前端JavaScript构成：ECMAScript、DOM、BOM
+*核心语言和宿主对象
+JavaScript 和 DOM 并不是不可分割的，它们的语言标准相互独立。
+DOM 对 JavaScript 来说，是宿主对象，是语言中可更换的部分
+ECMAScript 对 JavaScript 来说，是核心语言，是不可被替代的功能
+平台相当于宿主环境
+js取决于浏览器（宿主环境）提供的功能BOM和DOM
+BOM操作弹出框alert，定时
+DOM操作浏览器上展示的DOM结构
+ES声明变量，定义对象，使用数据等
+宿主对象是宿主环境提供的
+*客户端与服务端JavaScript（核心都是ES）
+客户端 JavaScript前端（环境：浏览器）：ECMAScript、DOM、BOM
+服务端 JavaScript后端（环境：Node.js）：ECMAScript、fs……
+服务端 JavaScript环境Node.js
+fs操作文件，创建、删除、修改文件等
+JavaScript 在不同的运行环境，有着不同的内置宿主对象
+*浏览器
+浏览器 —— 客户端 JavaScript 运行的宿主环境
+js实现方式（js引擎）
+Chrome：v8
+*ECMAScript
+ECMAScript（ES）是 JavaScript 的语法标准
+ECMAScript 的版本
+ES5 2009-12
+ES6 2015-06 ES2015
+ES7 2016-06 ES2016
+ES8 2017-06 ES2017
+ES9 2018-06 ES2018
+ES10 2019-06 ES2019
+JavaScript语言特点
+直译式脚本语言
+ 在宿主（浏览器、Node）中解释执行（比编译执行慢）
+ 非编译语言，不是在执行前提前编译可执行文件或字节码
+弱类型、动态类型语言
+ 写程序时不用给变量指定特定的数据类型（动态类型）
+ 可以动态的更改变量的类型（弱类型）
+不适合开发大项目
+typescript:可以解决类型问题，可以开发大项目
+JavaScript语言特点
+ ES5没有块作用域
+ 基于原型链的继承方式
+
+
+JavaScript 只能够在浏览器中执行？
+ 不是，JavaScript 除了在浏览器中运行，还可以在其他的运行环境中运行，如 node.js 环境。目前 JavaScript 的运行环境有浏览器和 node.js 环境两种。
+ JavaScript 在浏览器中是如何运行的？
+ 浏览器下载 JavaScript 脚本文件后，由浏览器 JavaScript 引擎解释执行。
+
+
+
